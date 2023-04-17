@@ -115,6 +115,13 @@ public class AnimeDetails extends AppCompatActivity {
                                 EpisodeLinksModel episodeLinksModel = response1.body();
                                 if(episodeLinksModel != null){
                                     Intent intent = new Intent(getApplicationContext(), VideoPlayer.class);
+                                    String title = episode.getTitle();
+                                    if(title != null){
+                                        title = episode.getNumber() + " . " + title;
+                                    }else{
+                                        title = "Episode " + episode.getNumber();
+                                    }
+                                    intent.putExtra("title", title);
                                     for(Source source: episodeLinksModel.getSources()){
                                         intent.putExtra(source.getQuality(), source.getUrl());
                                     }
