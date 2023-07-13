@@ -1,8 +1,9 @@
 package com.anime.mangekyo.model.stream;
 
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
 public class Headers {

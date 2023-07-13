@@ -26,9 +26,8 @@
         </activity>
         <activity
             android:name=".fragment.VideoPlayer"
-            android:screenOrientation="sensorLandscape"
-            android:label="Video Player">
-        </activity>
+            android:label="Video Player"
+            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>

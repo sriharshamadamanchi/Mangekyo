@@ -18,8 +18,8 @@ public abstract class AnimeDatabase extends RoomDatabase {
         if (instance == null) {
             instance = Room.databaseBuilder(
                             context.getApplicationContext(),
-                            AnimeDatabase.class, "animeDatabase").
-                    fallbackToDestructiveMigration()
+                            AnimeDatabase.class, "animeDatabase")
+                    .fallbackToDestructiveMigration()
                     .build();
         }
         return instance;

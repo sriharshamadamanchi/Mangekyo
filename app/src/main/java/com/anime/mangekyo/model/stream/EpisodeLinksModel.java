@@ -3,10 +3,12 @@ package com.anime.mangekyo.model.stream;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 
-import java.util.List;
-import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
 public class EpisodeLinksModel extends BaseObservable {

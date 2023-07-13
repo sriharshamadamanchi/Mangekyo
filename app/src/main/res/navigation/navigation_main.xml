@@ -9,7 +9,7 @@
         android:id="@+id/mainFragment"
         android:name="com.anime.mangekyo.fragment.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/navigateToAnimeDetailsFragment"
             app:destination="@id/animeDetailsFragment" />
@@ -25,15 +25,15 @@
         android:id="@+id/animeDetailsFragment"
         android:name="com.anime.mangekyo.fragment.AnimeDetailsFragment"
         android:label="fragment_anime_details"
-        tools:layout="@layout/fragment_anime_details" >
+        tools:layout="@layout/fragment_anime_details">
         <argument
             android:name="id"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
         <argument
             android:name="title"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -44,31 +44,31 @@
         android:id="@+id/videoPlayerFragment"
         android:name="com.anime.mangekyo.fragment.VideoPlayerFragment"
         android:label="fragment_video_player"
-        tools:layout="@layout/fragment_video_player" >
+        tools:layout="@layout/fragment_video_player">
         <argument
             android:name="title"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
         <argument
             android:name="p360"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
         <argument
             android:name="p480"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
         <argument
             android:name="p720"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
         <argument
             android:name="p1080"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
         <argument
             android:name="pdefault"
-            app:argType="string"
-            android:defaultValue="" />
+            android:defaultValue=""
+            app:argType="string" />
     </fragment>
 
 </navigation>

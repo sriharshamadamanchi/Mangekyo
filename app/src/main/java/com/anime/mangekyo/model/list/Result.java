@@ -1,11 +1,11 @@
-
 package com.anime.mangekyo.model.list;
-
-import java.util.List;
-import javax.annotation.Generated;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
+import javax.annotation.Generated;
 
 @Generated("jsonschema2pojo")
 public class Result {

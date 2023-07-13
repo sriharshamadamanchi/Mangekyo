@@ -22,7 +22,8 @@ public class TypeConverterUtil {
             return Collections.emptyList();
         }
 
-        Type listType = new TypeToken<List<Result>>() {}.getType();
+        Type listType = new TypeToken<List<Result>>() {
+        }.getType();
 
         return gson.fromJson(data, listType);
     }
@@ -38,7 +39,8 @@ public class TypeConverterUtil {
             return Collections.emptyList();
         }
 
-        Type listType = new TypeToken<List<Episode>>() {}.getType();
+        Type listType = new TypeToken<List<Episode>>() {
+        }.getType();
 
         return gson.fromJson(data, listType);
     }
@@ -54,7 +56,8 @@ public class TypeConverterUtil {
             return Collections.emptyList();
         }
 
-        Type listType = new TypeToken<List<String>>() {}.getType();
+        Type listType = new TypeToken<List<String>>() {
+        }.getType();
 
         return gson.fromJson(data, listType);
     }

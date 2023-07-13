@@ -15,32 +15,33 @@ import java.util.List;
 public class MainFragmentViewHolder extends AndroidViewModel {
     AnimeRepository animeRepository;
     FragmentMainBinding fragmentMainBinding;
+
     public MainFragmentViewHolder(@NonNull Application application) {
         super(application);
         animeRepository = new AnimeRepository(application);
     }
 
-    public void insertAnimeList(AnimeModel animes){
+    public void insertAnimeList(AnimeModel animes) {
         animeRepository.insertAnimeList(animes);
     }
 
-    public void updateAnimeList(AnimeModel animes){
+    public void updateAnimeList(AnimeModel animes) {
         animeRepository.updateAnimeList(animes);
     }
 
-    public LiveData<List<AnimeModel>> getPopularAnime(){
+    public LiveData<List<AnimeModel>> getPopularAnime() {
         return animeRepository.getPopularAnime();
     }
 
-    public LiveData<List<AnimeModel>> getRecentAnime(){
+    public LiveData<List<AnimeModel>> getRecentAnime() {
         return animeRepository.getRecentAnime();
     }
 
-    public LiveData<List<AnimeModel>> getTopAiringAnime(){
+    public LiveData<List<AnimeModel>> getTopAiringAnime() {
         return animeRepository.getTopAiringAnime();
     }
 
-    public LiveData<List<AnimeModel>> getAnimeMovies(){
+    public LiveData<List<AnimeModel>> getAnimeMovies() {
         return animeRepository.getAnimeMovies();
     }
 
