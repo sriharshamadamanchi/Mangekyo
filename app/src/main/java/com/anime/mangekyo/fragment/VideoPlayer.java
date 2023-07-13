@@ -1,4 +1,4 @@
-package com.anime.mangekyo.activity;
+package com.anime.mangekyo.fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -11,11 +11,9 @@ import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.media3.common.MediaItem;
-import androidx.media3.common.MimeTypes;
 import androidx.media3.common.Player;
 import androidx.media3.datasource.DataSource;
 import androidx.media3.datasource.DefaultHttpDataSource;
@@ -40,10 +38,11 @@ public class VideoPlayer extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.video_player);
+
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
         videoPlayer = findViewById(R.id.videoPlayer);
@@ -59,7 +58,7 @@ public class VideoPlayer extends Activity {
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
                     public boolean onMenuItemClick(MenuItem menuItem) {
-                        if(menuItem.getItemId() == R.id.videoQuality){
+                        if (menuItem.getItemId() == R.id.videoQuality) {
 
                         }
                         return true;
@@ -109,7 +108,7 @@ public class VideoPlayer extends Activity {
         player.addListener(new Player.Listener() {
             @Override
             public void onPlaybackStateChanged(int playbackState) {
-                if(playbackState == Player.STATE_BUFFERING){
+                if (playbackState == Player.STATE_BUFFERING) {
                     videoLoader.setVisibility(View.VISIBLE);
                 } else if (playbackState == Player.STATE_READY) {
                     videoLoader.setVisibility(View.GONE);
@@ -121,10 +120,10 @@ public class VideoPlayer extends Activity {
     @Override
     protected void onStart() {
         super.onStart();
-        if(player != null){
+        if (player != null) {
             player.play();
         }
-        if(videoPlayer != null){
+        if (videoPlayer != null) {
             videoPlayer.onResume();
         }
     }
@@ -132,10 +131,10 @@ public class VideoPlayer extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
-        if(player != null){
+        if (player != null) {
             player.play();
         }
-        if(videoPlayer != null){
+        if (videoPlayer != null) {
             videoPlayer.onResume();
         }
     }
@@ -143,7 +142,7 @@ public class VideoPlayer extends Activity {
     @Override
     protected void onStop() {
         super.onStop();
-        if(player != null){
+        if (player != null) {
             player.pause();
         }
     }
@@ -154,22 +153,22 @@ public class VideoPlayer extends Activity {
         releasePlayer();
     }
 
-    public String getUrl(String[] qualities){
-        for(String quality: qualities){
-            if(quality != null){
-                return  quality;
+    public String getUrl(String[] qualities) {
+        for (String quality : qualities) {
+            if (quality != null) {
+                return quality;
             }
         }
 
         return "";
     }
 
-    private void releasePlayer(){
-        if(player != null){
+    private void releasePlayer() {
+        if (player != null) {
             player.release();
             player = null;
         }
-        if(videoPlayer != null){
+        if (videoPlayer != null) {
             videoPlayer.setPlayer(null);
         }
     }

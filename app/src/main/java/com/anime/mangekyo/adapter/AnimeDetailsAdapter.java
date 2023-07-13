@@ -1,4 +1,4 @@
-package com.anime.mangekyo.adapter.details;
+package com.anime.mangekyo.adapter;
 
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
@@ -38,9 +38,9 @@ public class AnimeDetailsAdapter extends RecyclerView.Adapter<AnimeDetailsAdapte
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Episode episode = data.get(position);
         String title = episode.getTitle();
-        if(title != null){
+        if (title != null) {
             title = episode.getNumber() + " . " + title;
-        }else{
+        } else {
             title = "Episode " + episode.getNumber();
         }
         holder.episodeTitle.setText(title);
@@ -62,6 +62,7 @@ public class AnimeDetailsAdapter extends RecyclerView.Adapter<AnimeDetailsAdapte
 
         ImageView episodeImage;
         TextView episodeTitle;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             episodeImage = itemView.findViewById(R.id.episodeImage);

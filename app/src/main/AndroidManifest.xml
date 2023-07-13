@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,7 +15,7 @@
         android:theme="@style/Theme.Mangekyo"
         tools:targetApi="31">
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".MainActivity"
             android:exported="true"
             android:label="Anime">
             <intent-filter>
@@ -24,29 +25,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.AnimeDetails"
-            android:label="Details"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
-        </activity>
-        <activity
-            android:name=".activity.VideoPlayer"
+            android:name=".fragment.VideoPlayer"
             android:screenOrientation="sensorLandscape"
-            android:label="Video Player"
-            android:parentActivityName=".activity.AnimeDetails">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.AnimeDetails" />
-        </activity>
-        <activity
-            android:name=".activity.Search"
-            android:label="Search"
-            android:parentActivityName=".activity.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.MainActivity" />
+            android:label="Video Player">
         </activity>
     </application>
 

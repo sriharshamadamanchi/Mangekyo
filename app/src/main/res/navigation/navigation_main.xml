@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.anime.mangekyo.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/navigateToAnimeDetailsFragment"
+            app:destination="@id/animeDetailsFragment" />
+        <action
+            android:id="@+id/navigateToSearchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/navigateToVideoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/animeDetailsFragment"
+        android:name="com.anime.mangekyo.fragment.AnimeDetailsFragment"
+        android:label="fragment_anime_details"
+        tools:layout="@layout/fragment_anime_details" >
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.anime.mangekyo.fragment.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.anime.mangekyo.fragment.VideoPlayerFragment"
+        android:label="fragment_video_player"
+        tools:layout="@layout/fragment_video_player" >
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="p360"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="p480"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="p720"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="p1080"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="pdefault"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+</navigation>

@@ -1,12 +1,15 @@
 package com.anime.mangekyo.model.stream;
 
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+
 import java.util.List;
 import javax.annotation.Generated;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 @Generated("jsonschema2pojo")
-public class EpisodeLinksModel {
+public class EpisodeLinksModel extends BaseObservable {
 
     @SerializedName("headers")
     @Expose
@@ -18,6 +21,7 @@ public class EpisodeLinksModel {
     @Expose
     private String download;
 
+    @Bindable
     public Headers getHeaders() {
         return headers;
     }
@@ -26,6 +30,7 @@ public class EpisodeLinksModel {
         this.headers = headers;
     }
 
+    @Bindable
     public List<Source> getSources() {
         return sources;
     }
@@ -34,6 +39,7 @@ public class EpisodeLinksModel {
         this.sources = sources;
     }
 
+    @Bindable
     public String getDownload() {
         return download;
     }
