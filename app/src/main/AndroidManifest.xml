@@ -24,10 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".fragment.VideoPlayer"
-            android:label="Video Player"
-            android:screenOrientation="sensorLandscape"></activity>
     </application>
 
 </manifest>
