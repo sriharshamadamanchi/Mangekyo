@@ -49,7 +49,7 @@ public class AnimeDetailsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        fragmentAnimeDetailsBinding = FragmentAnimeDetailsBinding.inflate(inflater);
+        fragmentAnimeDetailsBinding = FragmentAnimeDetailsBinding.inflate(inflater, container, false);
         return fragmentAnimeDetailsBinding.getRoot();
     }
 
